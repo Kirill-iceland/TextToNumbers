@@ -18,6 +18,9 @@ let powof10infoFT: {two: string, three: string, six: string, nine: string} = {tw
 
 
 export function toText(Number: number | string): String | Boolean{
+    if(parseInt(Number.toString()) == 69 && Math.floor(Math.random() * 4) == 1){
+        return "Nice"
+    }
     Number = Number.toString();
 
     if(0 <= Number.search(/\./)){

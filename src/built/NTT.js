@@ -12,6 +12,9 @@ var powof1000 = ["", "Mil", "Bil", "Tril", "Kvaðril", "Kvintil", "Sextil", "Sep
 var powof10infoET = { two: "Hundrað", three: "Þúsund", six: "ljón", nine: "ljarður" };
 var powof10infoFT = { two: "Hundruð", three: "Þúsund", six: "ljónir", nine: "ljarðir" };
 function toText(Number) {
+    if (parseInt(Number.toString()) == 69 && Math.floor(Math.random() * 4) == 1) {
+        return "Nice";
+    }
     Number = Number.toString();
     if (0 <= Number.search(/\./)) {
         console.error("Error: " + Number + " is not an Intager");
