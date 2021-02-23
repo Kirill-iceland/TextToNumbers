@@ -115,6 +115,14 @@ export function toText(Number: number | string): String | Boolean{
     return minus + finalresult.join(" ")
 }
 
+declare global {
+    interface Number {
+        toText(): String | Boolean;
+    }
+    interface String {
+        NumbertoText(): String | Boolean;
+    }
+}
 Number.prototype.toText = function(){
     return toText(this);
 }
